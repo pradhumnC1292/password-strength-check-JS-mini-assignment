@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Strength</h1>
+      <input
+        type="password"
+        id="passwordInput"
+        placeholder="Enter the password"
+        oninput="checkPasswordStrength()"
+      />
+      <div class="strength-indicators">
+        <span id="lowercase" class="indicator">Lowercase</span>
+        <span id="uppercase" class="indicator">Uppercase</span>
+        <span id="number" class="indicator">Number</span>
+        <span id="symbol" class="indicator">Symbols</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+      <p id="charCount">Password has 0 chars</p>
+      <p id="strengthMessage">
+        Your password is <span id="strength">Weak</span>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
